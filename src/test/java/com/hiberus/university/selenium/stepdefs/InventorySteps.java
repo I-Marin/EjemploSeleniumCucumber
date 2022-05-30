@@ -1,6 +1,7 @@
 package com.hiberus.university.selenium.stepdefs;
 
 import com.hiberus.university.selenium.pages.InventoryPage;
+import com.hiberus.university.selenium.pages.InventoryPage.FilterOptions;
 import com.hiberus.university.selenium.pages.PagesFactory;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -59,7 +60,7 @@ public class InventorySteps {
     @And("the user clicks the filter to sort from Z to A")
     public void theUserClicksTheFilterToSortFromZToA() {
         InventoryPage inventoryPage = PagesFactory.getInstance().getInventoryPage();
-        inventoryPage.filterBy("za");
+        inventoryPage.filterBy(FilterOptions.za);
     }
 
     @Then("the page get sorted from Z to A")
@@ -75,7 +76,7 @@ public class InventorySteps {
     @And("the user clicks the filter to sort by price from lower to higher")
     public void theUserClicksTheFilterToSortByPriceFromLowerToHigher() {
         InventoryPage inventoryPage = PagesFactory.getInstance().getInventoryPage();
-        inventoryPage.filterBy("lohi");
+        inventoryPage.filterBy(FilterOptions.lohi);
     }
 
     @Then("the page get sorted by price from lower to higher")
@@ -91,7 +92,7 @@ public class InventorySteps {
     @And("the user clicks the filter to sort by price from higher to lower")
     public void theUserClicksTheFilterToSortByPriceFromHigherToLower() {
         InventoryPage inventoryPage = PagesFactory.getInstance().getInventoryPage();
-        inventoryPage.filterBy("hilo");
+        inventoryPage.filterBy(FilterOptions.hilo);
     }
 
     @Then("the page get sorted by price from higher to lower")

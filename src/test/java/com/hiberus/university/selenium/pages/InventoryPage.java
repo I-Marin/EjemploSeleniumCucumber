@@ -121,20 +121,22 @@ public class InventoryPage extends AbstractPage {
         return products.size();
     }
 
-    public void filterBy(String value) {
+    public void filterBy(FilterOptions option) {
         try {
-            filter.findElement(By.xpath("//option[@value='" + value + "']"))
+            filter.findElement(By.xpath("//option[@value='" + option.name() + "']"))
                     .click();
         } catch (Exception e) {
             System.err.println("Filtro inválido");
         }
     }
+    public enum FilterOptions { az, za, lohi, hilo }
     public List<String> getProductsTitles() {
         List<String> titles = new ArrayList<>();
         for (WebElement product : products)
             titles.add(getProductTitle(product).getText());
         return titles;
     }
+
 
     public List<Double> getProductsPrices() {
         List<Double> prices = new ArrayList<>();
