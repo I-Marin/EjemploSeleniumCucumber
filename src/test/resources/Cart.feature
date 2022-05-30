@@ -1,3 +1,4 @@
+@Cart
 Feature: Cart
 
   Background:
@@ -6,6 +7,7 @@ Feature: Cart
     And the user provides the password "secret_sauce"
     And the user clicks the login button
 
+  @TestCase11
   Scenario: Remove a product from the cart
     When the user adds 2 random products to the cart
     And the user clicks the cart button
