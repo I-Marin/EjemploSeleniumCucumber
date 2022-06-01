@@ -1,4 +1,4 @@
-@Checkout
+@checkout
 Feature: Checkout
 
   Background:
@@ -8,7 +8,7 @@ Feature: Checkout
     And the user clicks the login button
     And the user is logged successfully and is into the inventory page
 
-  @TestCase12
+  @testcase12
   Scenario: Remove a product from the cart
     And the user adds 3 random products to the cart
     And the user clicks the cart button
@@ -17,7 +17,7 @@ Feature: Checkout
     When the user continues to the second step
     Then the total price of the order is the correct
 
-  @TestCase13
+  @testcase13
   Scenario: Remove a product from the cart
     And the user adds 1 random products to the cart
     And the user clicks the cart button

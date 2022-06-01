@@ -1,4 +1,4 @@
-@Logout
+@logout
 Feature: Logout
 
   Background:
@@ -7,7 +7,7 @@ Feature: Logout
     And the user provides the password "secret_sauce"
     And the user clicks the login button
 
-  @TestCase14
+  @testcase14
   Scenario: Verify the logout
     When the user clicks on the lateral panel
     And the user clicks on the log out button

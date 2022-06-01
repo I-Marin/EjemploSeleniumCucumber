@@ -21,8 +21,8 @@ public abstract class AbstractPage {
     AbstractPage(WebDriver driver) {
         this.driver = driver;
         wait = new MyFluentWait<>(driver)
-                .withTimeout(60, ChronoUnit.SECONDS)
-                .pollingEvery(1, ChronoUnit.SECONDS)
+                .withTimeout(10, ChronoUnit.SECONDS)
+                .pollingEvery(250, ChronoUnit.MILLIS)
                 .ignoring(NoSuchElementException.class);
     }
     public abstract WebElement getPageLoadedTestElement();
